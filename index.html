@@ -40,7 +40,7 @@
         <p class="text-lg-center fs-6">
          <div id="typed-strings">  Hey I am <em> Purnansh Upadhyay A 22 year old web developer from UP, India who loves to code and play chess.</p></em>
       </div>
-
+<span id="typed"></span>
       </div> 
     <p class=" text-center  fs-1 text-mute"> <u> Strengths</p>
     <div class="d-flex justify-content-center">
@@ -78,7 +78,10 @@
     <h4 id="scrollspyHeading5">Fifth heading</h4>
     <p>...</p>
   </div>
-
+var typed = new Typed('.element', {
+  // Waits 1000ms after typing "First"
+  strings: ['First ^1000 sentence.', 'Second sentence.']
+});
   <script src="index.js"></script>
   <script src="index1.js"></script>
   <script src="index2.js"></script>
