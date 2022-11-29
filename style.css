@@ -1,4 +1,13 @@
 #purna{
     background-color: blueviolet;
 }
- 
+ /* Cursor */
+.typed-cursor {
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+}
+#typed-strings {
+font-size: 12px;
+}
