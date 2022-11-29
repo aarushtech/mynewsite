@@ -83,10 +83,11 @@
     <h4 id="scrollspyHeading5">Fifth heading</h4>
     <p>...</p>
   </div>
-var typed = new Typed('.element', {
-  // Waits 1000ms after typing "First"
-  strings: ['First ^1000 sentence.', 'Second sentence.']
-});
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings'
+  });
+</script>
   <script src="index.js"></script>
   <script src="index1.js"></script>
   <script src="index2.js"></script>
