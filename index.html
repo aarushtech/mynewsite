@@ -117,22 +117,7 @@
     stringsElement: '#typed-strings'
   });
 </script>
-<script>
-  var limit = 3;
-$.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/facts?limit= ' + limit,
-    headers: { 'X-Api-Key': 'oJ9j67eS+62tRSTPXjNbmA==7xExu7zKwSbg3iek'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
-  
-  </script>
+
   <script src="index.js"></script>
  
   <script src="/timeago.js"></script>
