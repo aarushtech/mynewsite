@@ -10,23 +10,7 @@
 <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script>
- const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=movies&count=10",
-	"method": "POST",
-	"headers": {
-		"X-RapidAPI-Key": "5719390cccmsheb41b48ff48e89fp193f86jsn1fd08fb438f8",
-		"X-RapidAPI-Host": "andruxnet-random-famous-quotes.p.rapidapi.com"
-	}
-};
-
-$.ajax(settings).done(function (response) {
-	
-	document.getElementById("demo").innerHTML = "response" ; 
-});
-    </script>
+<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 </head>
 <body>
   <nav id="navbar-example2" class="navbar bg-light px-1 mb-3 fixed-top">
@@ -128,7 +112,23 @@ $.ajax(settings).done(function (response) {
     stringsElement: '#typed-strings'
   });
 </script>
+<script>
+import * as DarkModeToggle from 'https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs';
 
+const toggle = document.querySelector('dark-mode-toggle');
+const body = document.body;
+
+// Set or remove the `dark` class the first time.
+toggle.mode === 'dark'
+  ? body.classList.add('dark')
+  : body.classList.remove('dark');
+
+// Listen for toggle changes (which includes `prefers-color-scheme` changes)
+// and toggle the `dark` class accordingly.
+toggle.addEventListener('colorschemechange', () => {
+  body.classList.toggle('dark', toggle.mode === 'dark');
+});
+	</script>
   <script src="index.js"></script>
  
   <script src="/timeago.js"></script>
