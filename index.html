@@ -15,8 +15,45 @@
   <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)">
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+	    <script>
+      // If `prefers-color-scheme` is not supported, fall back to light mode.
+      // In this case, light.css will be downloaded with `highest` priority.
+      if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+        document.documentElement.style.display = 'none';
+        document.head.insertAdjacentHTML(
+          'beforeend',
+          '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = ``">',
+        );
+      }
+    </script>
 </head>
 <body>
+	<aside>
+      <dark-mode-toggle id="dark-mode-toggle-1"></dark-mode-toggle>
+    </aside>
+    <aside>
+      <dark-mode-toggle id="dark-mode-toggle-2"></dark-mode-toggle>
+    </aside>
+    <aside>
+      <dark-mode-toggle
+        id="dark-mode-toggle-3"
+        legend="Dark Mode"
+        light="off"
+        dark="on"
+        remember="always"
+      ></dark-mode-toggle>
+    </aside>
+    <aside>
+      <dark-mode-toggle
+        id="dark-mode-toggle-4"
+        legend="Theme Switcher"
+        light="Light"
+        dark="Dark"
+        remember="Remember this"
+        appearance="switch"
+      ></dark-mode-toggle>
+    </aside>
+    <aside>
   <nav id="navbar-example2" class="navbar bg-light px-1 mb-3 fixed-top">
     <a class="navbar-brand" href="#">PU</a>
     <ul class="nav nav-pills">
