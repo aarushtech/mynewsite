@@ -11,18 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
-<script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
-	    <script>
-      // If `prefers-color-scheme` is not supported, fall back to light mode.
-      // In this case, light.css will be downloaded with `highest` priority.
-      if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
-        document.documentElement.style.display = 'none';
-        document.head.insertAdjacentHTML(
-          'beforeend',
-          '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = ``">',
-        );
-      }
-    </script>
+
 </head>
 <body>
 	<aside>
